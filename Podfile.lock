@@ -1,0 +1,36 @@
+PODS:
+  - Kingfisher (7.1.1)
+  - Nimble (9.2.1)
+  - Quick (4.0.0)
+  - Reusable (4.1.2):
+    - Reusable/Storyboard (= 4.1.2)
+    - Reusable/View (= 4.1.2)
+  - Reusable/Storyboard (4.1.2)
+  - Reusable/View (4.1.2)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - Kingfisher
+  - Nimble
+  - Quick
+  - Reusable
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - Nimble
+    - Quick
+    - Reusable
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
+  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
+  Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 7d0982c30e421acee565469826d441909ef9b62c
+
+COCOAPODS: 1.11.2
