@@ -42,15 +42,21 @@ class SearchViewController: UIViewController {
         self.title = "Movie List"
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.layoutIfNeeded()
         self.navigationItem.searchController = self.searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
         self.viewModel = SearchViewModel(self)
         self.viewModel.loadData()
  
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueDetail" {
+            if let viewController = segue.destination as? MovieDetailViewController {
+                if let imdbID = sender as? String {
+                    viewController.imdbID = imdbID
+                }
+            }
+        }
+    }
 }
 
 extension SearchViewController: UICollectionViewDataSource {
@@ -79,7 +85,8 @@ extension SearchViewController: UICollectionViewDataSource {
 }
 extension SearchViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let movie = self.viewModel.dataSource[indexPath.row]
+        self.performSegue(withIdentifier: "segueDetail", sender: movie.imdbID)
     }
 }
 // MARK:- UICollectionViewDelegateFlowLayout methods

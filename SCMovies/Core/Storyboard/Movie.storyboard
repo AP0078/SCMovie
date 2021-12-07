@@ -51,6 +51,7 @@
                     <connections>
                         <outlet property="collectionView" destination="nlq-lk-I0z" id="o97-hl-JSZ"/>
                         <outlet property="messageLabel" destination="KL2-m7-7mE" id="Ujb-XR-nrd"/>
+                        <segue destination="Sc5-6h-JyQ" kind="show" identifier="segueDetail" id="Q6U-ek-16j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -74,6 +75,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJT-Qp-Uqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="oG6-Fi-Hj4">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailViewController" id="Sc5-6h-JyQ" customClass="MovieDetailViewController" customModule="SCMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="owS-Kl-dcF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0k5-Gm-5f1">
+                                <rect key="frame" x="10" y="448" width="394" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qLd-ja-cMg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jlf-qT-N9I">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PmY-le-8l1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="qLd-ja-cMg" secondAttribute="bottom" id="Eke-4B-nGa"/>
+                            <constraint firstItem="PmY-le-8l1" firstAttribute="trailing" secondItem="qLd-ja-cMg" secondAttribute="trailing" id="JLJ-36-eO8"/>
+                            <constraint firstItem="qLd-ja-cMg" firstAttribute="top" secondItem="PmY-le-8l1" secondAttribute="top" id="UHa-RI-JQ1"/>
+                            <constraint firstItem="0k5-Gm-5f1" firstAttribute="centerY" secondItem="owS-Kl-dcF" secondAttribute="centerY" id="eI8-pw-jWe"/>
+                            <constraint firstItem="qLd-ja-cMg" firstAttribute="leading" secondItem="PmY-le-8l1" secondAttribute="leading" id="kav-gm-rTN"/>
+                            <constraint firstAttribute="trailing" secondItem="0k5-Gm-5f1" secondAttribute="trailing" constant="10" id="rRP-vZ-DIh"/>
+                            <constraint firstItem="0k5-Gm-5f1" firstAttribute="leading" secondItem="owS-Kl-dcF" secondAttribute="leading" constant="10" id="yYN-E5-wGf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Xj-NH-9Qa"/>
+                    <connections>
+                        <outlet property="collectionView" destination="qLd-ja-cMg" id="Oa7-eS-3fV"/>
+                        <outlet property="messageLabel" destination="0k5-Gm-5f1" id="ebn-AI-fYq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pDV-Od-AqH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="98"/>
         </scene>
     </scenes>
     <resources>

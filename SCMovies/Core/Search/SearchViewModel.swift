@@ -13,11 +13,6 @@ enum SearchError: Error {
 
 class SearchViewModel: BaseViewModel {
     
-    override init(_ delegate: ViewModelDelegate? = nil) {
-        super.init(delegate)
-        self.delegate = delegate
-    }
-  
     private var currentPage: Int = 1
     private var totalResults: Int = 0
     
@@ -43,7 +38,7 @@ class SearchViewModel: BaseViewModel {
         guard let title = searchString, title.count > 2 else {
             dataSource.removeAll()
             currentPage = 1
-            self.failure(error: SearchError.error("Type Min 3 words"))
+            self.failure(error: SearchError.error("Type minimum 3 words to search"))
             return
         }
         
