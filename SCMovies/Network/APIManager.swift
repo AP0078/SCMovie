@@ -8,6 +8,7 @@
 import Foundation
 ///
 class APIManager: RequestManager {
+    static let shared = APIManager()
     static let APIkey = "b9bd48a6"
     static let baseURL = "http://www.omdbapi.com"
     override init(session: URLSession = .shared) {

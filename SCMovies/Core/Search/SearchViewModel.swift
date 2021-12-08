@@ -38,7 +38,7 @@ class SearchViewModel: BaseViewModel {
         guard let title = searchString, title.count > 2 else {
             dataSource.removeAll()
             currentPage = 1
-            self.failure(error: SearchError.error("Type minimum 3 words to search"))
+            self.failure(error: SearchError.error("Type minimum 3 words"))
             return
         }
         

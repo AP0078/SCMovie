@@ -41,12 +41,14 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Movie List"
         self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.searchController = self.searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
         self.viewModel = SearchViewModel(self)
-        self.viewModel.loadData()
- 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueDetail" {

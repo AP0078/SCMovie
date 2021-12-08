@@ -20,7 +20,6 @@ enum URLError: Error {
 ///
 class RequestManager: NSObject {
     
-    static let shared = RequestManager()
     private var session: URLSession
     /// defaultTimeoutInterval is 90 sec
     static var defaultTimeoutInterval: TimeInterval = 90.0
